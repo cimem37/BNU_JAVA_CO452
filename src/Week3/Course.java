@@ -3,5 +3,5 @@ import helpers.*;
 
 public class Course 
 {
-    
+    String code;
 }
