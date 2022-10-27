@@ -14,6 +14,16 @@ public class Week02
         System.out.println("  Week 2 Java Selection & Iteration ");
         System.out.println();
         System.out.println(" by Nicholas Day and Derek Peacock");
-        System.out.println("bob");
+        System.out.println();
+
+        int count = 9;
+        while( count >= 0)
+        {
+            if(count % 3 == 0)
+            {
+                System.out.println(count);
+            }
+            count--;
+        }
     }     
 }
