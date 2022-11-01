@@ -1,0 +1,29 @@
+public class Tunes {
+
+ private string tunes;
+ private string artist;
+ private int playcount;
+
+  //Constructor
+  public Tunes(String tunes, String artist, int playcount)
+
+   {
+
+   this.tunes= tunes;
+   this.artist= artist;
+   this.playcount+ playcount;
+
+   }
+
+    //print method
+    public void print()
+
+     {
+
+     System.out.print("Track"+ this.tunes + "\t");
+     System.out.print("Artist" + this.artist + "\t");
+     System.out.println("Playcount" this.playcount +"\t")
+
+     }
+
+}
