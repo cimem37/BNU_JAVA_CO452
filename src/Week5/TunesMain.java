@@ -7,7 +7,7 @@ public class TunesMain {
     public static void main(String[] args)
     {
 
-        System.out.println("Hello , thanks for launching BNUTUNESᵇᵉᵗᵃ");
+        System.out.println("Hello , thanks for launching BNUTUNES");
 
         Songs ABC = new Songs("f", "G", 123);
         Songs DEF = new Songs("A","B",3);
