@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import helpers.InputReader;
 ;
 
-public class TunesMain {
+public class TunesMain 
+{
     public static final String CONSOLE_CLEAR = "\033[H\033[2J";
     public static void main(String[] args)
     {
@@ -37,28 +38,30 @@ public class TunesMain {
         songs.add(YZ2);
         songs.add(YZ3);
 
-//PrintList(Songs);
-System.out.println(CONSOLE_CLEAR);
-String opening = InputReader.getString( "Would you like to check BNUbeta's latest top tunes ? ");
-opening.toLowerCase();
-if (opening.equals("y") || opening.equals("yes"))
-{
-for(Songs tuneSongs : songs )
-{
-    tuneSongs.print();
-}
-
-
-
-
-
-
-        for (Songs current: songs)
+        //PrintList(Songs);
+        System.out.println(CONSOLE_CLEAR);
+        String opening = InputReader.getString( "Would you like to check BNUbeta's latest top tunes ? ");
+        opening.toLowerCase();
+        if (opening.equals("y") || opening.equals("yes"))
         {
-            current.print();
+        for(Songs tuneSongs : songs )
+        {
+            tuneSongs.print();
         }
-    
 
+        String yesOrNO = InputReader.getString("New Song? ");
 
+        String name = InputReader.getString("Enter the name: ");
+        String artistname = InputReader.getString("Enter the artist: ");
+        int plays = InputReader.getInt("Enter the plays: ");
 
-    }}}
+        Songs newsong = new Songs(name, artistname, plays); 
+        songs.add(newsong);
+
+        for(Songs tuneSongs : songs )
+        {
+            tuneSongs.print();
+        }
+
+    }}
+}
