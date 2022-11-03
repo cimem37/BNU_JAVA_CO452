@@ -1,5 +1,7 @@
 package Week5;
 import java.util.ArrayList;
+
+import helpers.InputReader;
 ;
 
 public class TunesMain {
@@ -7,8 +9,8 @@ public class TunesMain {
     public static void main(String[] args)
     {
 
-        System.out.println("Hello , thanks for launching BNUTUNES");
-
+        
+       
         Songs ABC = new Songs("f", "G", 123);
         Songs DEF = new Songs("A","B",3);
         Songs GHI = new Songs("4","5",6);
@@ -33,13 +35,30 @@ public class TunesMain {
         songs.add(VWX);
         songs.add(YZ1);
         songs.add(YZ2);
+        songs.add(YZ3);
+
+//PrintList(Songs);
+System.out.println(CONSOLE_CLEAR);
+String opening = InputReader.getString( "Would you like to check BNUbeta's latest top tunes ? ");
+opening.toLowerCase();
+if (opening.equals("y") || opening.equals("yes"))
+{
+for(Songs tuneSongs : songs )
+{
+    tuneSongs.print();
+}
+
+
+
+
+
 
         for (Songs current: songs)
         {
             current.print();
         }
-    }
+    
 
 
 
-}
+    }}}
