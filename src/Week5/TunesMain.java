@@ -7,7 +7,7 @@ public class TunesMain {
     public static void main(String[] args)
     {
 
-        System.out.println("Hello");
+        System.out.println("Hello , thanks for launching BNUTUNESᵇᵉᵗᵃ");
 
         Songs ABC = new Songs("f", "G", 123);
         Songs DEF = new Songs("A","B",3);
@@ -19,6 +19,7 @@ public class TunesMain {
         Songs VWX = new Songs ("19","20",21);
         Songs YZ1 = new Songs ("22","23",24);
         Songs YZ2 = new Songs ("25","26",27);
+        Songs YZ3 = new Songs ("28","29",30);
 
         ArrayList<Songs> songs = new ArrayList<Songs>();
      
