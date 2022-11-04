@@ -40,24 +40,27 @@ public class TunesMain
         String opening = InputReader.getString( "Would you like to check BNUbeta's latest top tunes ? ").toLowerCase();
         if (opening.equals("y") || opening.equals("yes"))
         {
-        for(Songs tuneSongs : songs )
-        {
-            tuneSongs.print();
+            for(Songs tuneSongs : songs )
+            {
+                tuneSongs.print();
+            }
         }
 
-        String yesOrNO = InputReader.getString("New Song? ");
-
-        String name = InputReader.getString("Enter the name: ");
-        String artistname = InputReader.getString("Enter the artist: ");
-        int plays = InputReader.getInt("Enter the plays: ");
-
-        Songs newsong = new Songs(name, artistname, plays); 
-        songs.add(newsong);
-
-        for(Songs tuneSongs : songs )
+        //Adding song
+        String yesOrNO = InputReader.getString("New Song? ").toLowerCase();
+        if (yesOrNO.equals("y") || yesOrNO.equals("yes"))
         {
-            tuneSongs.print();
-        }
+            String name = InputReader.getString("Enter the name: ");
+            String artistname = InputReader.getString("Enter the artist: ");
+            int plays = InputReader.getInt("Enter the plays: ");
 
-    }}
+            Songs newsong = new Songs(name, artistname, plays); 
+            songs.add(newsong);
+
+            for(Songs tuneSongs : songs )
+            {
+            tuneSongs.print();
+            }
+        }
+    }
 }
