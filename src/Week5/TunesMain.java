@@ -40,8 +40,7 @@ public class TunesMain
 
         //PrintList(Songs);
         System.out.println(CONSOLE_CLEAR);
-        String opening = InputReader.getString( "Would you like to check BNUbeta's latest top tunes ? ");
-        opening.toLowerCase();
+        String opening = InputReader.getString( "Would you like to check BNUbeta's latest top tunes ? ").toLowerCase();
         if (opening.equals("y") || opening.equals("yes"))
         {
         for(Songs tuneSongs : songs )
