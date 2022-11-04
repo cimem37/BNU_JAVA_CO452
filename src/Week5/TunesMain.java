@@ -9,9 +9,6 @@ public class TunesMain
     public static final String CONSOLE_CLEAR = "\033[H\033[2J";
     public static void main(String[] args)
     {
-
-        
-       
         Songs ABC = new Songs("f", "G", 123);
         Songs DEF = new Songs("A","B",3);
         Songs GHI = new Songs("4","5",6);
