@@ -62,5 +62,25 @@ public class TunesMain
             tuneSongs.print();
             }
         }
+
+        // Romove a song
+        String yesOrNo2 = InputReader.getString("Would you like to remove a Song ? ").toLowerCase();
+        if (yesOrNo2.equals("y") || yesOrNo2.equals("yes"))
+        {
+            String name = InputReader.getString("Which song do you want to delete ? ");
+            for(Songs tuneSongs : songs)
+            {
+                songs.remove(tuneSongs);
+            }
+
+            System.out.println("The song you selected has been succesfully deleted! ");
+        }
+
+
+            
+        
     }
 }
+
+
+
