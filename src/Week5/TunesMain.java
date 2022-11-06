@@ -9,17 +9,17 @@ public class TunesMain
     public static final String CONSOLE_CLEAR = "\033[H\033[2J";
     public static void main(String[] args)
     {
-        Songs ABC = new Songs("f", "G", 123);
-        Songs DEF = new Songs("A","B",3);
-        Songs GHI = new Songs("4","5",6);
-        Songs JKL = new Songs("7","8",9);
-        Songs MNO = new Songs ("10","11",2);
-        Songs PQR = new Songs ("13","14",15);
-        Songs STU = new Songs ("16","17",18);
-        Songs VWX = new Songs ("19","20",21);
-        Songs YZ1 = new Songs ("22","23",24);
-        Songs YZ2 = new Songs ("25","26",27);
-        Songs YZ3 = new Songs ("28","29",30);
+        Songs ABC = new Songs("Bohemian Rhapsody", "Queen", 49000000);
+        Songs DEF = new Songs("Bella Ciao - ORIGINALE ","Italians",96000000);
+        Songs GHI = new Songs("Zemër","Dhurata Dora ft. Soolking",737000000);
+        Songs JKL = new Songs("Habibi","Ricky Rich, Dardan & DJ Gimi-O ",66000000);
+        Songs MNO = new Songs ("Danza Kuduro (Official Extended Remix)","Don Omar ft. Lucenzo, Daddy Yankee & Arcángel",309000000);
+        Songs PQR = new Songs ("Georgian Gandagana","Georgian people",8100000);
+        Songs STU = new Songs ("Way Down We Go","KALEO",495000000);
+        Songs VWX = new Songs ("In The End","Linkin Park",1400000000);
+        Songs YZ1 = new Songs ("Du hast","Rammstein" ,464000000);
+        Songs YZ2 = new Songs ("Eins Zwei Polizei","Mo-Do",47741420);
+        Songs YZ3 = new Songs ("The Final Countdown","europathebandtv",1000000000);
 
         ArrayList<Songs> songs = new ArrayList<Songs>();
      
@@ -67,14 +67,39 @@ public class TunesMain
         String yesOrNo2 = InputReader.getString("Would you like to remove a Song ? ").toLowerCase();
         if (yesOrNo2.equals("y") || yesOrNo2.equals("yes"))
         {
-            String name = InputReader.getString("Which song do you want to delete ? ");
+            String name = InputReader.getString("Which song do you want to delete ? ").toLowerCase();
             for(Songs tuneSongs : songs)
             {
-                songs.remove(tuneSongs);
+            
+                if (name.equals(tuneSongs.getTunes().toLowerCase()))
+                {
+                    songs.remove(tuneSongs);
+                    System.out.println("The song you selected has been succesfully deleted! ");
+                }
+            }
+        }
+
+        for(Songs tuneSongs : songs )
+        {
+            tuneSongs.print();
+        }
+        
+        //Print a list of songs over a given number of plays
+        String yesOrNO3 = InputReader.getString("Would you want to filter the songs over a defined playcount ?  ").toLowerCase();
+
+        if (yesOrNO.equals("y") || yesOrNO.equals("yes"))
+        {
+            int minimumCount = InputReader.getInt("Whats the minimum playcount number ?");
+            for(Songs tuneSongs : songs )
+            {
+                if (tuneSongs.getCount() >= minimumCount)
+                {
+                    tuneSongs.print();                                    
+                }
             }
 
-            System.out.println("The song you selected has been succesfully deleted! ");
         }
+
 
 
             

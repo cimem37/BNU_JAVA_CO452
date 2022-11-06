@@ -25,7 +25,15 @@ public class Songs
       System.out.println("Playcount: " + this.playcount +"\t"); 
 
       }
+      
+    public String getTunes() 
+    {
+    return tunes; 
+    }
 
+    public int getCount() {
+        return playcount; 
+    }
 }
 
 
